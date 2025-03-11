@@ -1,0 +1,11 @@
+services: # （１）
+  env:
+    image: stablematching
+    container_name: stablematching_contadiner
+    volumes: # （４）
+      - ..:/root/work
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
